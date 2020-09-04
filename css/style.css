@@ -7,9 +7,11 @@
   --box-bg-color: #f5f4fa;
 }
 
-/* * {
-  outline: 1px solid red;
-} */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
 
 body {
   background-color: var(--primary-white-color);
@@ -42,7 +44,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 270px;
+  width: 100%;
   height: 120px;
   background-color: var(--box-bg-color);
   margin-bottom: 30px;
@@ -111,17 +113,26 @@ img {
 
 /* hero */
 .hero {
-  text-align: center;
-  padding-right: 15px;
-  padding-left: 15px;
-  padding-top: 94px;
-  padding-bottom: 94px;
-  background: #2f303a;
+  padding: 40px 15px;
+  max-width: 1600px;
+  min-height: 600px;
+  margin: 0 auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../img/heroimg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.hero-container {
+.hero-bg {
   max-width: 696px;
-  margin: 0 auto;
   text-align: center;
 }
 
@@ -155,6 +166,7 @@ img {
 .feature-list {
   display: flex;
   list-style: none;
+  margin: -15px;
 }
 
 .section-item {

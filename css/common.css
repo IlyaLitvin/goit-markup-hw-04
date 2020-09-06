@@ -8,6 +8,7 @@
   --secondary-white-color: #e5e5e5;
   --secondary-text-color: rgba(255, 255, 255, 0.6);
   --box-bg-color: #f5f4fa;
+  --primary-icon-color: #afb1b8;
 }
 
 body {
@@ -98,6 +99,21 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacts-svg {
+  margin-right: 10px;
+}
+
+.contacts-item-svg {
+  fill: var(--primary-text-color);
+}
+
+.contacts-item-svg:hover {
+  fill: var(--accent-color);
 }
 
 .contacts {
@@ -210,21 +226,22 @@ img {
   text-decoration: none;
 }
 
-/* footer */
-
-.social {
-  color: var(--primary-white-color);
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-}
+/* ===============footer=============== */
 
 .footer {
   background: #2f303a;
   padding-bottom: 60px;
   padding-top: 60px;
+  max-width: 1600px;
+  margin: auto;
+}
+
+.footer-container {
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .footer-logo {
@@ -233,8 +250,7 @@ img {
 
 .adress {
   font-style: normal;
-  width: 270px;
-  margin-left: 215px;
+  margin-right: 70px;
 }
 
 .adress-title {
@@ -246,15 +262,51 @@ img {
   letter-spacing: 0.03em;
 }
 
-.contacts-footer-list {
-  list-style: none;
-}
-
 .footer-list-link {
   margin-bottom: 9px;
 }
 
-/* Button */
+.footer-social-container {
+  margin-right: 90px;
+}
+
+.social {
+  color: var(--primary-white-color);
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.footer-social-lists {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  margin: 20px auto;
+}
+.footer-social-item-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 40px;
+  height: 40px;
+}
+
+.footer-social-item-link:hover {
+  background-color: var(--accent-color);
+}
+
+.footer-social-list-svg {
+  fill: #ffffff;
+  width: 20px;
+  height: 20px;
+}
+/* ===============footer============== */
+/* ===========Button=========== */
 .button {
   color: var(--title-text-color);
   background-color: var(--third-white-color);
@@ -264,6 +316,7 @@ img {
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
+  text-decoration: none;
 }
 
 .buttons {
@@ -315,3 +368,4 @@ img {
 .button {
   cursor: pointer;
 }
+/* ===========Button=========== */
